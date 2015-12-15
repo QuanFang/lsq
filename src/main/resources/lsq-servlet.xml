@@ -52,6 +52,7 @@
     <bean id="viewResolver"
           class="org.springframework.web.servlet.view.velocity.VelocityLayoutViewResolver">
         <property name="suffix" value=".vm"/>
+        <!--这儿的配置是必须有的，也就是默认回去加载这个layout.vm-->
         <property name="layoutUrl" value="layout.vm"/>
         <!-- 避免乱码 -->
         <property name="contentType" value="text/html;charset=UTF-8"/>
@@ -63,8 +64,18 @@
     </bean>
 
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+        <property name="contentType" value="text/html;charset=UTF-8"></property>
         <property name="suffix" value=".html"></property>
         <property name="order" value="20"></property>
+    </bean>
+
+    <bean
+            class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+        <property name="messageConverters">
+            <list>
+                <ref bean="mappingJacksonHttpMessageConverter" />
+            </list>
+        </property>
     </bean>
 
     <bean id="jsonConverter"
@@ -87,5 +98,6 @@
             </bean>
         </constructor-arg>
     </bean>
+
 
 </beans>

@@ -1,8 +1,10 @@
 package com.liushuqing.controller;
 
-import org.springframework.http.HttpRequest;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+import javax.servlet.http.HttpServletRequest;
 
 /**
  * Created by liushuqing on 15/12/15.
@@ -12,7 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class CommonController extends BaseController {
 
     @RequestMapping(value = "hello")
-    public String getHello(HttpRequest request) {
+    public String getHello(@RequestParam(required = false) HttpServletRequest request) {
         return "hello";
     }
 }

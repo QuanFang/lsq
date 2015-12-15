@@ -22,8 +22,8 @@ import javax.servlet.http.HttpServletRequest;
  * @author nancheng
  *
  */
-//@Controller
-//@RequestMapping(value = "spider")
+@Controller
+@RequestMapping(value = "spider")
 public class SpiderApiController extends BaseController {
 
     @Resource

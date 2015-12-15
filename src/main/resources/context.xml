@@ -22,6 +22,4 @@
         </property>
     </bean>
 
-    <import resource="lsq-servlet.xml"/>
-
 </beans>
