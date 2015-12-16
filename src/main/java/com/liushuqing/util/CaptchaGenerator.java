@@ -9,6 +9,7 @@ import java.util.Random;
 
 /**
  * Created by liushuqing on 15/12/16.
+ * 用来生成验证码，使用两位数的加减运算，默认情况下，a+(-)b=c,a和b之中，必须有一个是个位数，c不能超过100
  */
 public class CaptchaGenerator {
     private static Logger logger = LoggerFactory.getLogger(CaptchaGenerator.class);
@@ -175,8 +176,9 @@ public class CaptchaGenerator {
      * 定义图片的高度 40
      */
     public CaptchaGenerator() {
-        this.gd = buffImg.createGraphics();
         fo = new Font(font, Font.BOLD, fontHeight);
+        this.buffImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
+        this.gd = buffImg.createGraphics();
         gd.setFont(fo);
         image = new CaptchaImage();
     }
@@ -196,12 +198,15 @@ public class CaptchaGenerator {
         this.linesTims = linesTims;
         this.font = font;
         this.fontHeight = fontHeight;
+        this.buffImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         this.gd = buffImg.createGraphics();
+
         fo = new Font(font, Font.BOLD, fontHeight);
         gd.setFont(fo);
         xx = width / 9;
         codeY = 3 * height / 4;
         image = new CaptchaImage();
+
     }
 
     /**
@@ -224,6 +229,7 @@ public class CaptchaGenerator {
         this.MAX = MAX;
         this.MIN = MIN;
         this.fontHeight = fontHeight;
+        this.buffImg = new BufferedImage(width, height, BufferedImage.TYPE_INT_RGB);
         this.gd = buffImg.createGraphics();
         fo = new Font(font, Font.BOLD, fontHeight);
         gd.setFont(fo);

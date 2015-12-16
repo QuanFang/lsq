@@ -51,4 +51,9 @@ public class CaptchaImage {
     public void setBufferedImage(BufferedImage bufferedImage) {
         this.bufferedImage = bufferedImage;
     }
+
+    @Override
+    public String toString() {
+        return "验证码内容是： "+this.expression;
+    }
 }
