@@ -4,9 +4,10 @@ package com.liushuqing.controller;
  * Created by liushuqing on 15/12/16.
  */
 
-import com.liushuqing.util.CaptchaGenerator;
-import com.liushuqing.util.CaptchaImage;
+
 import com.liushuqing.web.ApiResult;
+import com.weidian.captcha.util.CaptchaGenerator;
+import com.weidian.captcha.util.CaptchaImage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -18,10 +19,7 @@ import javax.servlet.ServletOutputStream;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import java.awt.*;
-import java.awt.image.BufferedImage;
 import java.io.IOException;
-import java.util.Random;
 
 @Controller
 @RequestMapping("/admin")
@@ -52,7 +50,7 @@ public class CodeController {
     @RequestMapping("/code")
     public void getCode(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         if(captchaGenerator==null){
-            captchaGenerator=new CaptchaGenerator(100,25,5,3,"Monaco ",20);//Monaco
+            captchaGenerator=new CaptchaGenerator(100,30,5,4,"Monaco ",20);//Monaco
         }
         CaptchaImage image=captchaGenerator.generateImage();
         // 将四位数字的验证码保存到Session中。

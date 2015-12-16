@@ -1,6 +1,0 @@
-<div>
-Hello
-$task.name
-$task.id
-</div>
-<button class="btn btn-success">你好</button>

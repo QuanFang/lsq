@@ -14,13 +14,6 @@
     <packaging>war</packaging>
 
     <dependencies>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>3.8.1</version>
-            <scope>test</scope>
-        </dependency>
-
         <!-- spring的所有相关start -->
 
         <dependency>
@@ -136,37 +129,12 @@
 
         <!--验证码开始-->
         <dependency>
-            <groupId>com.github.axet</groupId>
-            <artifactId>kaptcha</artifactId>
-            <version>0.0.9</version>
+            <artifactId>captcha-core</artifactId>
+            <groupId>com.vdian.captcha</groupId>
+            <version>1.0.0</version>
         </dependency>
 
-        <dependency>
-            <groupId>com.google.code.kaptcha</groupId>
-            <artifactId>kaptcha</artifactId>
-            <version>2.3.2</version>
-        </dependency>
         <!--验证码结束-->
-
-        <!-- 日志相关开始 -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-            <version>1.6.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-log4j12</artifactId>
-            <version>1.6.2</version>
-        </dependency>
-
-        <dependency>
-            <groupId>log4j</groupId>
-            <artifactId>log4j</artifactId>
-            <version>1.2.16</version>
-        </dependency>
-        <!-- 日志相关结束 -->
 
     </dependencies>
 
@@ -181,27 +149,6 @@
                 <configuration>
                     <warSourceDirectory>src/main/webapp</warSourceDirectory>
                     <failOnMissingWebXml>false</failOnMissingWebXml>
-                    <webResources>
-                        <resource>
-                            <directory>src/main/webapp/WEB-INF</directory>
-                            <filtering>true</filtering>
-                            <includes>
-                                <include>**/*.xml</include>
-                                <include>**/*.properties</include>
-                            </includes>
-                            <targetPath>WEB-INF</targetPath>
-                        </resource>
-
-                        <resource>
-                            <directory>src/main/resources</directory>
-                            <filtering>true</filtering>
-                            <includes>
-                                <include>**/*.xml</include>
-                                <include>**/*.properties</include>
-                            </includes>
-                            <targetPath>WEB-INF/classes</targetPath>
-                        </resource>
-                    </webResources>
                 </configuration>
             </plugin>
         </plugins>

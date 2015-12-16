@@ -34,7 +34,7 @@
     </bean>
 
     <!-- 这儿映射首页 -->
-    <mvc:view-controller path="/" view-name="/view/register-get" />
+    <mvc:view-controller path="/" view-name="register-get" />
 
     <bean id="velocityConfigurer"
           class="org.springframework.web.servlet.view.velocity.VelocityConfigurer">

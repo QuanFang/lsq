@@ -3,3 +3,6 @@
 *.class
 *.iml
 *~
+/out/
+/captcha-core/target/
+/captcha-web/target/
