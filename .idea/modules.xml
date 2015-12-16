@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/captcha-core/captcha-core.iml" filepath="$PROJECT_DIR$/captcha-core/captcha-core.iml" />
+      <module fileurl="file://$PROJECT_DIR$/captcha-web/captcha-web.iml" filepath="$PROJECT_DIR$/captcha-web/captcha-web.iml" />
       <module fileurl="file://$PROJECT_DIR$/lsq.iml" filepath="$PROJECT_DIR$/lsq.iml" />
     </modules>
   </component>

@@ -2,10 +2,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <modelVersion>4.0.0</modelVersion>
-    <groupId>com.liushuqing</groupId>
-    <artifactId>lsq</artifactId>
-    <packaging>war</packaging>
+    <groupId>com.vdian.captcha</groupId>
+    <artifactId>captcha-code</artifactId>
+    <packaging>pom</packaging>
     <version>1.0-SNAPSHOT</version>
+    <modules>
+        <module>captcha-core</module>
+        <module>captcha-web</module>
+    </modules>
 
     <name>lsq</name>
 
@@ -172,7 +176,7 @@
 
     <build>
         <finalName>wqn</finalName>
-        <sourceDirectory>src</sourceDirectory>
+        <!--<sourceDirectory>src</sourceDirectory>-->
         <plugins>
             <plugin>
                 <artifactId>maven-compiler-plugin</artifactId>
@@ -182,14 +186,7 @@
                     <target>1.7</target>
                 </configuration>
             </plugin>
-            <plugin>
-                <artifactId>maven-war-plugin</artifactId>
-                <version>2.6</version>
-                <configuration>
-                    <warSourceDirectory>src/main/webapp</warSourceDirectory>
-                    <failOnMissingWebXml>false</failOnMissingWebXml>
-                </configuration>
-            </plugin>
+
         </plugins>
     </build>
 </project>

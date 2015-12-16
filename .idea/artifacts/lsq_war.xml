@@ -3,6 +3,9 @@
     <output-path>$PROJECT_DIR$/target</output-path>
     <root id="archive" name="wqn.war">
       <element id="artifact" artifact-name="lsq:war exploded" />
+      <element id="directory" name="META-INF">
+        <element id="file-copy" path="$PROJECT_DIR$/captcha-web/target/META-INF/MANIFEST.MF" />
+      </element>
     </root>
   </artifact>
 </component>

@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="captcha-web:war">
+    <output-path>$PROJECT_DIR$/captcha-web/target</output-path>
+    <root id="archive" name="captcha-web.war">
+      <element id="artifact" artifact-name="captcha-web:war exploded" />
+    </root>
+  </artifact>
+</component>

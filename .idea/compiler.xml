@@ -22,11 +22,16 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="lsq" />
+        <module name="captcha-core" />
+        <module name="captcha-web" />
+        <module name="web" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="captcha-core" target="1.7" />
+      <module name="captcha-web" target="1.7" />
       <module name="lsq" target="1.7" />
+      <module name="web" target="1.7" />
     </bytecodeTargetLevel>
   </component>
 </project>
