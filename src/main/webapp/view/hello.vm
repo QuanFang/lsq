@@ -1,8 +1,6 @@
-<html lang="en" class="no-js">
-<head>
-    <meta charset="utf-8"/>
-</head>
-<body>
+<div>
 Hello
-</body>
-</html>
+$task.name
+$task.id
+</div>
+<button class="btn btn-success">你好</button>

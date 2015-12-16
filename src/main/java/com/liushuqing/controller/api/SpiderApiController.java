@@ -32,7 +32,7 @@ public class SpiderApiController extends BaseController {
     @Resource
     private DianyingFMRepoPageProcessor pageProcessor;
 
-    private StringBuilder sb = new StringBuilder("http://dianying.fm/search/?text=");
+    private String sb = "http://dianying.fm/search/?text=";
 
     private static Logger logger = LoggerFactory.getLogger(SpiderApiController.class);
 
@@ -46,7 +46,7 @@ public class SpiderApiController extends BaseController {
             logger.debug("\n 是否为空 : " + pageProcessor + mysqlPipline + spider);
         }
         logger.debug("\n type is : " + type);
-        spider.addUrl(sb.append(keyword).toString());
+        spider.addUrl(sb+keyword);
         logger.warn("\n  发出爬取请求");
         spider.start();
         logger.warn("\n  爬虫异步开始");
@@ -60,6 +60,7 @@ public class SpiderApiController extends BaseController {
         logger.warn("\n  发出停止请求");
         if(spider!=null){
             spider.stop();
+            spider=null;
             logger.warn("\n  爬虫成功停止！");
         }else{
             logger.warn("\n  爬虫尚未初始化，不需要停止！");
